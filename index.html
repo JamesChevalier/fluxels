@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function main() {
+        var canvas    = document.getElementById('canvas');
+        canvas.width  = document.body.clientWidth;
+        canvas.height = document.body.clientHeight;
+        var ctx       = canvas.getContext('2d');
+        var cw        = canvas.width;
+        var ch        = canvas.height;
+        var id        = ctx.getImageData(0, 0, 1, 1);
+        var start     = null;
+
+        ctx.clearRect(0, 0, cw, ch);
+        draw(cw, ch, ctx);
+      }
+
+      function draw(cw, ch, ctx) {
+        requestAnimationFrame(function(){
+            draw(cw, ch, ctx);
+        });
+
+        for (var i = 0; i < 10000; ++i) {
+          var x = Math.random() * (cw - 0);
+          var y = Math.random() * (ch - 0);
+          var r = Math.floor(Math.random() * 256);
+          var g = Math.floor(Math.random() * 256);
+          var b = Math.floor(Math.random() * 256);
+
+          ctx.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
+          ctx.fillRect(x, y, 1, 1);
+        }
+      }
+    </script>
+  </head>
+
+  <body onload="main()">
+    <canvas id="canvas">
+  </body>
+</html>
