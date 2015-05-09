@@ -53,9 +53,14 @@
         }
       }
 
-      document.body.addEventListener('click', function() {
+      function toggleOverlay() {
         $('.overlay').toggle();
-      }, false);
+      }
+
+      // document.body.addEventListener('click', toggleOverlay, false);
+
+      $('body').on('click', toggleOverlay);
+
     </script>
   </body>
 </html>
