@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  background: rgb(50,50,50); /* Fallback background for browsers that don't support rgba */
+  background: rgba(50,50,50,.7); /* Transparent background for browsers that support rgba */
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.overlay h1 {
+  color: #9bec1b;
+  font: bold 50px Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
+  margin-top: 100px;
+}
+
+.overlay h2 {
+  color: #9bec1b;
+  font: bold 25px Arial, Helvetica, sans-serif;
+  margin-top: 0;
+}
+
+.overlay h2 a {
+  color: #C85AF3;
+  text-decoration: none;
+}
+
+.overlay h2 span{
+  font: bold 50% Arial, Helvetica, sans-serif;
+}

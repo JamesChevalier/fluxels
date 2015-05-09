@@ -1,11 +1,25 @@
-<html>
+<html lang="en">
   <head>
-    <style type="text/css">
-      body {
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fluxels | Pixels in Flux</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" media="all" />
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+
+  <body onload="main()">
+    <div class="overlay">
+      <h1>f l u x e l s</h1>
+
+      <h2>
+        pixels in flux
+        <span><a href="http://jameschevalier.us" target="_blank">by Martinis &amp; Greed</a></span>
+      </h2>
+    </div>
+
+    <canvas id="canvas">
 
     <script type="text/javascript">
       function main() {
@@ -38,10 +52,10 @@
           ctx.fillRect(x, y, 1, 1);
         }
       }
-    </script>
-  </head>
 
-  <body onload="main()">
-    <canvas id="canvas">
+      document.body.addEventListener('click', function() {
+        $('.overlay').toggle();
+      }, false);
+    </script>
   </body>
 </html>
